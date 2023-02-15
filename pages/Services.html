@@ -5,132 +5,435 @@
         <title>KJK</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="../assets/styles/style.css">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+        <link rel="stylesheet" href="../assets/styles/services.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300&display=swap" rel="stylesheet">
     </head>
     <body>
+        <nav class="navbar navbar-inverse bg-inverse bg-faded">
+            <div class="row">
+                <div>
+                    <a 
+                        class="navbar-brand" 
+                        href="./JediChurch.html"
+                    >
+                        Kungälvs Jedi Church
+                    </a>
+                </div>
+                <div class="col links">
+                    <a href="./JediChurch.html"><span>Home</span></a>
+                    <a href="./AboutUs.html"><span>About us</span></a>
+                    <a href="./Services.html"><span>Services</span></a>
+                </div>
+                <div class="col">
+                    <button type="button" class="btn btn-cart" data-toggle="modal" data-target="#cart">Total Items <span class="total-count"></span></button>
+                    <button class="btn clear-cart">Cancel Order</button>
+                </div>
+            </div>
+        </nav>
         <main>
-            <nav class="navbar bg-light">
-                <div class="container-fluid">
-                    <div class="navbar-header navbar-left pull-left">
-                        <a class="navbar-brand" href="./JediChurch.html">
-                            <img id="logo" src="../assets/img/logo-no-background.png" alt="Kungälvs Jedi Church logotype"
-                                height="100" width="600">
-                        </a>
-                    </div>
-                    <div class="navbar-header navbar-right pull-right">
-                        <a href="./JediChurch.html"><span>Home</span></a>
-                        <a href="./AboutUs.html"><span>About us</span></a>
-                        <a href="./Services.html"><span>Services</span></a>
-                        <p>
-                            Cart items: <span id="count">0</span>,
-                            Price: <span id="sum">0</span>
-                        </p>
-                    </div>
-                </div>
-            </nav>
-            <div class="container" >
-                <div class="row align-items-center">
+            <div class="container">
+                <div class="row">
                     <div class="col">
-                        <div class="item">
-                            <div class="item-header">
-                                <h1>Supreme Commander's Pants</h1>
+                        <div class="card" style="width: 18rem;">
+                            <img
+                                class="card-img-top" 
+                                src="https://qph.cf2.quoracdn.net/main-qimg-31b59a357869acd6fdf49dde90aab7ed-lq" 
+                                alt="supreme commander's pants"
+                            >
+                            <div class="card-body">
+                                <h5 class="card-title">Supreme Leader's Slacks</h5>
+                                <p class="card-text">4200 Credits</p>
+                                <hr />
+                                <div class="description-wrapper">
+                                    <p class="card-text">Ultra rare item! These legendary pantalones once belonged to the (in)famous Supreme Commander of the First Order, Kylo Ren. A special pair of pants indeed, very well sought after by everyone between Rebel scum and Imperial puppet alike.</p>
+                                </div>
+                                <hr />
                             </div>
-                            <div class="item-body">
-                                <img src="https://qph.cf2.quoracdn.net/main-qimg-31b59a357869acd6fdf49dde90aab7ed-lq" alt="supreme commander's pants">
-                                <p>These legendary pantalones once belonged to the (in)famous Supreme Commander of the First Order, Kylo Ren</p>
-                            </div>
-                            <div class="item-footer">
-                                <button class="purchase-btn">Add to card</button>
+                            <a href="#" data-name="Slacks" data-price="4200" class="add-to-cart btn btn-add-item">Add to cart</a>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card" style="width: 18rem;">
+                            <img
+                                class="card-img-top" 
+                                src="../assets/img/youngling.jpg" 
+                                alt="Youngling Babysitting"
+                            >
+                            <div card="card-body">
+                                <h5 class="card-title">Youngling Babysitting</h5>
+                                <p class="card-text">5000 Credits</p>
+                                <hr />
+                                <div class="description-wrapper">
+                                    <p class="card-text">Unruly Younglings giving you a hard time? Hire us and we'll take care of your problem for you!</p>
+                                </div>
+                                <hr />
+                                <a href="#" data-name="Babysitting" data-price="5000" class="add-to-cart btn btn-add-item">Add to cart</a>
                             </div>
                         </div>
                     </div>
                     <div class="col">
-                        <div class="item">
-                            <div class="item-header">
-                                <h1>Cleanse Sith Relic</h1>
-                            </div>
-                            <div class="item-body">
-                                <img src="../assets/img/SithRelic.jpg"
-                                    alt="supreme commander's pants">
-                                <p>Do you have an ancient relic of evil? We'll purge the evil right out!</p>
-                            </div>
-                            <div class="item-footer">
-                                <button class="purchase-btn">Add to card</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="item">
-                            <div class="item-header">
-                                <h1>Supreme Commander's Pants</h1>
-                            </div>
-                            <div class="item-body">
-                                <img src="https://qph.cf2.quoracdn.net/main-qimg-31b59a357869acd6fdf49dde90aab7ed-lq"
-                                    alt="supreme commander's pants">
-                                <p>These legendary pantalones once belonged to the (in)famous Supreme Commander of the First Order, Kylo Ren</p>
-                            </div>
-                            <div class="item-footer">
-                                <p>Price: 4200 Credits</p>
-                                <button class="purchase-btn" data-id="1" data-price="4200">Add to card</button>
+                        <div class="card" style="width: 18rem;">
+                            <img
+                                class="card-img-top" 
+                                src="..//assets/img/SithRelic.jpg" 
+                                alt="Sith relic"
+                            >
+                            <div class="card-body">
+                                <h5 class="card-title">Sith Relic Cleansing</h5>
+                                <p class="card-text">1500 Credits</p>
+                                <hr />
+                                <div class="description-wrapper">
+                                    <p class="card-text">Do you have ancient relics of evil from a bygone age? We'll cleanse the evil right out!</p>
+                                </div>
+                                <hr />
+                                <a href="#" data-name="Relic-Cleansing" data-price="1500" class="add-to-cart btn btn-add-item">Add to cart</a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="row align-items-center">
+                <div class="row">
                     <div class="col">
-                        <div class="item">
-                            <div class="item-header">
-                                <h1>Supreme Commander's Pants</h1>
-                            </div>
-                            <div class="item-body">
-                                <img src="https://qph.cf2.quoracdn.net/main-qimg-31b59a357869acd6fdf49dde90aab7ed-lq"
-                                    alt="supreme commander's pants">
-                                <p>These legendary pantalones once belonged to the (in)famous Supreme Commander of the First Order, Kylo Ren</p>
-                            </div>
-                            <div class="item-footer">
-                                <button class="purchase-btn">Add to card</button>
+                        <div class="card" style="width: 18rem;">
+                            <img
+                                class="card-img-top" 
+                                src="../assets/img/CloneVat.png" 
+                                alt="Cloning Vat"
+                            >
+                            <div class="card-body">
+                                <h5 class="card-title">Cloning Vat</h5>
+                                <p class="card-text">7000 Credits</p>
+                                <hr />
+                                <div class="description-wrapper">
+                                    <p class="card-text">Do you wish to create your own clone army or maybe reuse the villian from the first movie because you wrote yourself into a corner? Get one of these!</p>
+                                </div>
+                                <hr />
+                                <a href="#" data-name="Cloning-Vat" data-price="7000" class="add-to-cart btn btn-add-item">Add to cart</a>
                             </div>
                         </div>
                     </div>
                     <div class="col">
-                        <div class="item">
-                            <div class="item-header">
-                                <h1>Supreme Commander's Pants</h1>
-                            </div>
-                            <div class="item-body">
-                                <img src="https://qph.cf2.quoracdn.net/main-qimg-31b59a357869acd6fdf49dde90aab7ed-lq"
-                                    alt="supreme commander's pants">
-                                <p>These legendary pantalones once belonged to the (in)famous Supreme Commander of the First Order, Kylo Ren</p>
-                            </div>
-                            <div class="item-footer">
-                                <button class="purchase-btn">Add to card</button>
+                        <div class="card" style="width: 18rem;">                       
+                            <img
+                                class="card-img-top" 
+                                src="..//assets/img/BrokenSaber.jpg" 
+                                alt="Broken Lightsaber"
+                            >
+                            <div class="card-body">
+                                <h5 class="card-title">Lightsaber Repair</h5>
+                                <p class="card-text">500 Credits</p>
+                                <hr />
+                                <div class="description-wrapper">
+                                    <p class="card-text">Has your Lightsaber been broken in two? Is your kyber crystal damaged? We can fix it! </p>
+                                </div>
+                                <hr />
+                                <a href="#" data-name="Repair" data-price="500" class="add-to-cart btn btn-add-item">Add to cart</a>
                             </div>
                         </div>
                     </div>
                     <div class="col">
-                        <div class="item">
-                            <div class="item-header">
-                                <h1>Supreme Commander's Pants</h1>
+                        <div class="card" style="width: 18rem;">
+                            <img
+                                class="card-img-top" 
+                                src="..//assets/img/SacredJediTexts.jpeg" 
+                                alt="Sacred Jedi Texts"
+                            >
+                            <div class="card-body">
+                                <h5 class="card-title">Sacred Jedi Texts</h5>
+                                <p class="card-text">3500 Credits</p>
+                                <hr />
+                                <div class="description-wrapper">
+                                    <p class="card-text">Do you have priceless sacred texts you desperately want to preserve? We offer a veriety of services to allow that to happen. Digitization, carbonite encasing or even fire protection. Call today! </p>
+                                </div>
+                                <hr />
+                                <a href="#" data-name="Jedi-Texts" data-price="3500" class="add-to-cart btn btn-add-item">Add to cart</a>
                             </div>
-                            <div class="item-body">
-                                <img src="https://qph.cf2.quoracdn.net/main-qimg-31b59a357869acd6fdf49dde90aab7ed-lq"
-                                    alt="supreme commander's pants">
-                                <p>These legendary pantalones once belonged to the (in)famous Supreme Commander of the First Order, Kylo Ren</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="card" style="width: 18rem;">     
+                            <img
+                                class="card-img-top" 
+                                src="../assets/img/LegoSet.png" 
+                                alt="Razor Crest Lego Set"
+                            >
+                            <div class="card-body">
+                                <h5 class="card-title">The Razor Crest Lego Set</h5>
+                                <p class="card-text">12 000 Credits</p>
+                                <hr />
+                                <div class="description-wrapper">
+                                    <p class="card-text">Detachable escape pod, Opening minifigure cockpit, Spring-loaded shooters. Buy now!</p>
+                                </div>
+                                <hr />
+                                <a href="#" data-name="Lego-Set" data-price="12000" class="add-to-cart btn btn-add-item">Add to cart</a>
                             </div>
-                            <div class="item-footer">
-                                <button class="purchase-btn">Add to card</button>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card" style="width: 18rem;">  
+                            <img
+                                class="card-img-top" 
+                                src="../assets/img/Jedi Council.jpeg" 
+                                alt="supreme commander's pants"
+                            >
+                            <div class="card-body">
+                                <h5 class="card-title">Seat on the Council</h5>
+                                <p class="card-text">700 Credits</p>
+                                <hr />
+                                <div class="description-wrapper">
+                                    <p class="card-text">Rank of master not included.</p>
+                                </div>
+                                <hr />
+                                <a href="#" data-name="Council-Seat" data-price="700" class="add-to-cart btn btn-add-item">Add to cart</a>              
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card" style="width: 18rem;">
+                            <img
+                                class="card-img-top" 
+                                src="../assets/img/baby rancor.jpg" 
+                                alt="supreme commander's pants"
+                            >
+                            <div class="card-body">
+                                <h5 class="card-title">Baby Rancor</h5>
+                                <p class="card-text">4250 Credits</p>
+                                <hr />
+                                <div class="description-wrapper">
+                                    <p class="card-text">Your very own baby rancor. Warning! They grow up fast.</p>
+                                </div>
+                                <hr />
+                                <a href="#" data-name="Rancor" data-price="4250" class="add-to-cart btn btn-add-item">Add to cart</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Cart</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <table class="show-cart table">
+                            
+                            </table>
+                            <div>Total Credits: <span class="total-cart"></span></div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Order now</button>
+                    </div>
+                </div>
+            </div>
         </main>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
-            </script>
+        <script>
+            var shoppingCart = (function () {
+                cart = [];
+
+                    // Constructor
+                    function Item(name, price, count) {
+                        this.name = name;
+                        this.price = price;
+                        this.count = count;
+                    }
+
+                    // Save cart
+                    function saveCart() {
+                        sessionStorage.setItem('shoppingCart', JSON.stringify(cart));
+                    }
+
+                    // Load cart
+                    function loadCart() {
+                        cart = JSON.parse(sessionStorage.getItem('shoppingCart'));
+                    }
+
+                    if (sessionStorage.getItem("shoppingCart") != null) {
+                        loadCart();
+                    }
+
+                    var obj = {};
+
+                    // Add to cart
+                    obj.addItemToCart = function (name, price, count) {
+                        for (var item in cart) {
+                            if (cart[item].name === name) {
+                                cart[item].count++;
+                                saveCart();
+                                return;
+                            }
+                        }
+                        var item = new Item(name, price, count);
+                        cart.push(item);
+                        saveCart();
+                    }
+
+                    // Set count from item
+                    obj.setCountForItem = function (name, count) {
+                        for (var i in cart) {
+                            if (cart[i].name === name) {
+                                cart[i].count = count;
+                                break;
+                            }
+                        }
+                    };
+
+                    // Remove item from cart
+                    obj.removeItemFromCart = function (name) {
+                        for (var item in cart) {
+                            if (cart[item].name === name) {
+                                cart[item].count--;
+                                if (cart[item].count === 0) {
+                                    cart.splice(item, 1);
+                                }
+                                break;
+                            }
+                        }
+                        saveCart();
+                    }
+
+                    // Remove all items from cart
+                    obj.removeItemFromCartAll = function (name) {
+                        for (var item in cart) {
+                            if (cart[item].name === name) {
+                                cart.splice(item, 1);
+                                break;
+                            }
+                        }
+                        saveCart();
+                    }
+
+                    // Clear cart
+                    obj.clearCart = function () {
+                        cart = [];
+                        saveCart();
+                    }
+
+                    // Count cart 
+                    obj.totalCount = function () {
+                        var totalCount = 0;
+                        for (var item in cart) {
+                            totalCount += cart[item].count;
+                        }
+                        return totalCount;
+                    }
+
+                    // Total cart
+                    obj.totalCart = function () {
+                        var totalCart = 0;
+                        for (var item in cart) {
+                            totalCart += cart[item].price * cart[item].count;
+                        }
+                        return Number(totalCart.toFixed(2));
+                    }
+
+                    // List cart
+                    obj.listCart = function () {
+                        var cartCopy = [];
+                        for (i in cart) {
+                            item = cart[i];
+                            itemCopy = {};
+                            for (p in item) {
+                                itemCopy[p] = item[p];
+
+                            }
+                            itemCopy.total = Number(item.price * item.count).toFixed(2);
+                            cartCopy.push(itemCopy)
+                        }
+                        return cartCopy;
+                    }
+
+                    // cart : Array
+                    // Item : Object/Class
+                    // addItemToCart : Function
+                    // removeItemFromCart : Function
+                    // removeItemFromCartAll : Function
+                    // clearCart : Function
+                    // countCart : Function
+                    // totalCart : Function
+                    // listCart : Function
+                    // saveCart : Function
+                    // loadCart : Function
+                    return obj;
+                })();
+
+                // Add item
+                $('.add-to-cart').click(function (event) {
+                    event.preventDefault();
+                    var name = $(this).data('name');
+                    var price = Number($(this).data('price'));
+                    shoppingCart.addItemToCart(name, price, 1);
+                    displayCart();
+                });
+
+                // Clear items
+                $('.clear-cart').click(function () {
+                    shoppingCart.clearCart();
+                    displayCart();
+                });
+
+                function displayCart() {
+                    var cartArray = shoppingCart.listCart();
+                    var output = "";
+                    for (var i in cartArray) {
+                        output += "<tr>"
+                            + "<td>" + cartArray[i].name + "</td>"
+                            + "<td>(" + cartArray[i].price + ")</td>"
+                            + "<td><div class='input-group'><button class='minus-item input-group-addon btn btn-primary' data-name=" + cartArray[i].name + ">-</button>"
+                            + "<input type='number' class='item-count form-control' data-name='" + cartArray[i].name + "' value='" + cartArray[i].count + "'>"
+                            + "<button class='plus-item btn btn-primary input-group-addon' data-name=" + cartArray[i].name + ">+</button></div></td>"
+                            + "<td><button class='delete-item btn btn-danger' data-name=" + cartArray[i].name + ">X</button></td>"
+                            + " = "
+                            + "<td>" + cartArray[i].total + "</td>"
+                            + "</tr>";
+                    }
+                    $('.show-cart').html(output);
+                    $('.total-cart').html(shoppingCart.totalCart());
+                    $('.total-count').html(shoppingCart.totalCount());
+                }
+
+                // Delete item button
+                $('.show-cart').on("click", ".delete-item", function (event) {
+                    var name = $(this).data('name')
+                    shoppingCart.removeItemFromCartAll(name);
+                    displayCart();
+                })
+
+                // -1
+                $('.show-cart').on("click", ".minus-item", function (event) {
+                    var name = $(this).data('name')
+                    shoppingCart.removeItemFromCart(name);
+                    displayCart();
+                })
+
+                // +1
+                $('.show-cart').on("click", ".plus-item", function (event) {
+                    var name = $(this).data('name')
+                    shoppingCart.addItemToCart(name);
+                    displayCart();
+                })
+
+                // Item count input
+                $('.show-cart').on("change", ".item-count", function (event) {
+                    var name = $(this).data('name');
+                    var count = Number($(this).val());
+                    shoppingCart.setCountForItem(name, count);
+                    displayCart();
+                });
+
+                displayCart();
+        </script>
     </body>
 </html>
